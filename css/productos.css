@@ -1,0 +1,384 @@
+@import url("https://use.typekit.net/brp6pzc.css");
+.hidden {
+    display: none;
+}
+
+/* === PRODUCTOS === */
+/* estilos sección productos */
+.productos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.producto {
+    width: 360px;
+    height: 408px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.producto:hover .producto-texto {
+    color: #295E4D;
+}
+
+.producto:hover .producto-img {
+    background-size: 110%;
+}
+
+.producto-img {
+    width: 360px;
+    height: 369px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease;
+}
+
+.producto-texto {
+    width: 100%;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI Variable', sans-serif;
+    font-size: clamp(14px, 1vw, 21px);
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   FICHA TOP
+================================ */
+.ficha-top {
+    display: flex;
+    gap: 60px;
+    /* separación general izquierda / derecha */
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
+/* ===============================
+   GALERÍA PRODUCTO
+================================ */
+.producto-galeria {
+    width: 890px;
+    height: 845px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Imagen grande */
+.galeria-principal {
+    width: 890px;
+    height: 697px;
+}
+
+.galeria-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Thumbs */
+.galeria-thumbs {
+    margin-top: 21px;
+    display: flex;
+    gap: 21px;
+}
+
+.galeria-thumbs img {
+    width: 126px;
+    height: 126px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.galeria-thumbs img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   INFO PRODUCTO
+================================ */
+.producto-info {
+    width: 586px;
+    height: 626px;
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+}
+
+/* Título */
+.producto-info h1 {
+    margin: 0;
+    font-size: clamp(48px, 3.4vw, 64px);
+    font-weight: 600;
+    color: #295E4D;
+    font-family: 'Segoe UI Variable', sans-serif;
+}
+
+/* Descripción */
+.producto-info p {
+    margin: 0;
+    font-size: clamp(16px, 1.1vw, 21px);
+    line-height: 1.6;
+    color: #585857;
+    font-family: 'Segoe UI Variable', sans-serif;
+}
+
+
+/* ===============================
+   CARRUSEL ESPECIES
+================================ */
+.carrusel-wrapper {
+    width: 888px;
+    height: 480px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+/* Contenedor 4 img */
+.ficha-carrusel {
+    display: flex;
+    gap: 0;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+}
+
+/* Ocultar scrollbar */
+.ficha-carrusel::-webkit-scrollbar {
+    display: none;
+}
+
+.ficha-carrusel {
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* imagenes */
+.carrusel-item {
+    width: 222px;
+    height: 479px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.carrusel-item:hover {
+    transform: translateY(-4px);
+}
+
+.carrusel-item img {
+    width: 222px;
+    height: 428px;
+
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.carrusel-item:hover img {
+    transform: scale(1.08);
+}
+
+.carrusel-item span {
+    margin-top: 12px;
+
+    font-family: 'Segoe UI Variable', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+
+    color: #585857;
+}
+
+/* botones flechas*/
+.carrusel-btn {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    background: white;
+    color: #295E4D;
+
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carrusel-btn.prev {
+    left: -56px;
+}
+
+.carrusel-btn.next {
+    right: -56px;
+}
+
+.carrusel-btn:hover {
+    background: #295E4D;
+    color: white;
+}
+
+/* ===============================
+   FICHA PROPIEDADES
+================================ */
+
+.ficha-propiedades {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 40px;
+
+}
+
+/* ===============================
+   TABLA PROPIEDADES
+================================ */
+
+.propiedades-tabla {
+    width: 586px;
+    height: 276px;
+    padding: 0;
+    box-sizing: border-box;
+    margin-right: 20%;
+}
+
+/* TITULOS ALINEADOS */
+.propiedades-tabla h3,
+.propiedades-humedad h3 {
+    height: 32px;
+    margin: 0 0 16px 0;
+    font-size: 32px;
+    font-weight: 600;
+    padding: 12px 0;
+    color: #295E4D;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #295E4D;
+}
+
+.propiedades-humedad h3 {
+    width: 100%;
+}
+
+/* TABLA */
+.propiedades-tabla table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: #295E4D;
+    text-align: center;
+}
+
+/* HEADER */
+.propiedades-tabla thead th {
+    padding: 10px;
+    font-weight: 600;
+}
+
+/* BODY SCROLL */
+.propiedades-tabla tbody {
+    display: block;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.propiedades-tabla thead,
+.propiedades-tabla tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* CELDAS */
+.propiedades-tabla th,
+.propiedades-tabla td {
+    padding: 10px;
+}
+
+/* FILAS INTERCALADAS */
+.propiedades-tabla tbody tr:nth-child(odd) {
+    background: rgba(41, 94, 77, 0.05);
+}
+
+.propiedades-tabla tbody tr:nth-child(even) {
+    background: rgba(41, 94, 77, 0.12);
+}
+
+/* ===============================
+   HUMEDAD
+================================ */
+.propiedades-humedad {
+    width: 432px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* VALOR HUMEDAD */
+.propiedades-humedad span {
+    font-size: 21px;
+    font-weight: 600;
+    color: #295E4D;
+    padding: 20px 0;
+}
+
+/* ===============================
+   BOTON volver
+================================ */
+.volver-btn {
+    width: 130px;
+    height: auto;
+    padding: 1%;
+    background: none;
+    border: none;
+    font-size: 21px;
+    color: #295E4D;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.volver-icon {
+    font-size: 50px;
+    /* SOLO la flecha */
+    line-height: 1;
+}

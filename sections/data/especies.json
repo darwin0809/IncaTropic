@@ -1,0 +1,86 @@
+[
+  {
+    "id": "cumaru",
+    "nombre": "Cumaru",
+    "especie": "Dipteryx",
+    "familia": "Leguminosas",
+    "imagen": "/img/especies/prueba.jpg",
+    "descripcion": "El cumarú posee excelentes propiedades de durabilidad y resistencia a la intemperie. La madera se considera muy duradera en cuanto a resistencia a la descomposición, con buena resistencia a las termitas y otros barrenadores de la madera seca. La veta es entrelazada, con una textura media y un tacto ceroso.",
+    "propiedades": {
+      "Densidad básica": "0,80 g/cm³",
+      "Contracción tangencial": "7,7%",
+      "Contracción radial": "3,4%",
+      "Relación T/R": "1,9%",
+      "Módulo elasticidad": "1.399 kg/cm²",
+      "Módulo de elasticidad de rotura": "14.486 kg/cm²",
+      "Compresión paralela (RM)" : "8.834 kg/cm²",
+      "Compresión perpendicular (ELP)": "555 kg/cm²",
+      "Dureza en los lados": "1253 kgf/cm²",
+      "Dureza en la veta final": "1760 kgf/cm²"
+    }, 
+    "usos": "Pisos, gabinetes, muebles, construcción pesada, muelles.",
+    "acabado": [
+      "/img/Acabados/a1.jpg",
+      "/img/Acabados/a2.jpg"
+    ],
+    "productos": [
+      {
+        "img": "/img/Productos/p1.jpg",
+        "nombre": "S4S boards"
+      },
+      {
+        "img": "/img/Productos/p2.jpg",
+        "nombre": "S4S boards"
+      },
+      {
+        "img": "/img/Productos/p3.jpg",
+        "nombre": "S4S boards"
+      }
+    ]
+  },
+  {
+    "id": "caoba",
+    "nombre": "Caoba",
+    "imagen": "/img/especies/prueba.jpg"
+  },
+  {
+    "id": "shihuahuaco",
+    "nombre": "Shihuahuaco",
+    "imagen": "/img/especies/prueba.jpg"
+  },
+  {
+    "id": "cedro",
+    "nombre": "Cedro",
+    "imagen": "/img/especies/prueba.jpg"
+  },
+  {
+    "id": "caoba",
+    "nombre": "Caoba",
+    "imagen": "/img/especies/prueba.jpg"
+  },
+  {
+    "id": "shihuahuaco",
+    "nombre": "Shihuahuaco",
+    "imagen": "/img/especies/prueba.jpg"
+  },
+  {
+    "id": "cedro",
+    "nombre": "Cedro",
+    "imagen": "/img/especies/prueba.jpg"
+  },
+  {
+    "id": "caoba",
+    "nombre": "Caoba",
+    "imagen": "/img/especies/prueba.jpg"
+  },
+  {
+    "id": "shihuahuaco",
+    "nombre": "Shihuahuaco",
+    "imagen": "/img/especies/prueba.jpg"
+  },
+  {
+    "id": "cedro",
+    "nombre": "Cedro",
+    "imagen": "/img/especies/prueba.jpg"
+  }
+]

@@ -1,0 +1,86 @@
+<!-- GRID PRODUCTOS -->
+<div class="productos-container" id="productosContainer"></div>
+
+<!-- FICHA PRODUCTO -->
+<div class="producto-ficha hidden" id="productoFicha">
+
+    <button class="volver-btn" id="volverProductos">‹ Volver</button> 
+
+    <!-- ================= TOP ================= -->
+    <div class="ficha-top">
+
+        <!-- GALERÍA -->
+        <div class="producto-galeria">
+
+            <!-- IMAGEN GRANDE -->
+            <div class="galeria-principal">
+                <img id="productoImgPrincipal" src="" alt="">
+            </div>
+
+            <!-- MINIATURAS -->
+            <div class="galeria-thumbs" id="productoThumbs">
+                <!-- thumbs por JS -->
+            </div>
+
+        </div>
+
+        <!-- INFO -->
+        <div class="producto-info">
+            <h1 id="productoNombre"></h1>
+            <p id="productoDescripcion" class="descripcion"></p>
+
+            <div class="ficha-actions">
+                <button class="btn-outline">Contacto</button>
+                <button class="btn-primary">Cotizar ahora</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ================= CARRUSEL ================= -->
+    <div class="proposito">
+        <img src="img/Nosotros/GrecaProposito.svg" alt="" class="greca izquierda">
+        <h2 class="titulo-proposito">Especies Disponibles</h2>
+        <img src="img/Nosotros/GrecaProposito.svg" alt="" class="greca derecha">
+    </div>
+    <div class="carrusel-wrapper">
+
+        <button class="carrusel-btn prev" id="carruselPrev">‹</button>
+
+        <div class="ficha-carrusel" id="productoEspecies">
+            <!-- items por JS -->
+        </div>
+
+        <button class="carrusel-btn next" id="carruselNext">›</button>
+
+    </div>
+
+
+    <!-- ================= TABLA ================= -->
+    <div class="ficha-section ficha-propiedades">
+
+        <!-- TABLA -->
+        <div class="propiedades-tabla">
+            <h3>Dimensiones</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Espesor</th>
+                        <th>Ancho</th>
+                        <th>Longitud</th>
+                        <th>Corte</th>
+                    </tr>
+                </thead>
+                <tbody id="productoTabla"></tbody>
+            </table>
+        </div>
+
+        <!-- HUMEDAD -->
+        <div class="propiedades-humedad">
+            <h3>Contenido de Humedad</h3>
+            <span id="productoHumedad"></span>
+        </div>
+
+    </div>
+
+</div>

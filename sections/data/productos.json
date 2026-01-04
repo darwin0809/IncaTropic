@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "nombre": "Tablón de Madera",
+    "descripcion": "Madera seleccionada para uso estructural y decorativo.",
+    "imagenes": [
+      "/img/especies/prueba.jpg",
+      "/img/especies/prueba.jpg",
+      "/img/Productos/Producto3.svg"
+    ],
+    "especies": [
+      {
+        "nombre": "Pino",
+        "imagen": "/img/especies/prueba.jpg"
+      },
+      {
+        "nombre": "Roble",
+        "imagen": "/img/especies/prueba.jpg"
+      },
+            {
+        "nombre": "Roble",
+        "imagen": "/img/especies/prueba.jpg"
+      },    
+       {
+        "nombre": "Roble",
+        "imagen": "/img/especies/prueba.jpg"
+      },
+             {
+        "nombre": "Roble",
+        "imagen": "/img/Productos/Producto3.svg"
+      },
+                   {
+        "nombre": "Roble",
+        "imagen": "/img/Productos/Producto3.svg"
+      }
+    ],
+  "propiedades": [
+    {
+      "espesor": "18 mm",
+      "ancho": "120 mm",
+      "longitud": "2.44 m",
+      "corte": "Recto"
+    },
+    {
+      "espesor": "25 mm",
+      "ancho": "150 mm",
+      "longitud": "3.00 m",
+      "corte": "Biselado"
+    },
+    {
+      "espesor": "30 mm",
+      "ancho": "200 mm",
+      "longitud": "3.60 m",
+      "corte": "Especial"
+    },
+    {
+      "espesor": "40 mm",
+      "ancho": "250 mm",
+      "longitud": "4.20 m",
+      "corte": "Recto"
+    }
+  ],
+    "humedad": "12%"
+  }
+]
