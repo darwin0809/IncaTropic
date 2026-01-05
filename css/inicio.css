@@ -1,0 +1,506 @@
+@import url("https://use.typekit.net/vnz5bfp.css");
+
+:root {
+    --header-height: 80px;
+    --green: #295E4D;
+    font-family: "segoe-ui", sans-serif;
+}
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+}
+
+/* SLIDES */
+.slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* CONTENIDO */
+.slide-content {
+    height: 100%;
+    display: flex;
+}
+
+.slide-box {
+    margin-top: 12%;
+    width: 872px;
+    height: 270px;
+    background: #114635bf;
+    opacity: 0.25;
+    padding: 30px 40px;
+    margin-left: 80px;
+
+    clip-path: polygon(0 0,
+            /* esquina superior izquierda */
+            100% 8%,
+            /* recorte arriba derecha */
+            100% 92%,
+            /* recorte abajo derecha */
+            0 100%
+            /* esquina inferior izquierda */
+        );
+
+    transform: translateX(-100px);
+    opacity: 0;
+    animation: slideIn 1s ease forwards;
+}
+
+
+
+.slide.active .slide-box {
+    animation: slideIn 1s ease forwards;
+}
+
+.slide-box h1 {
+    color: #fff;
+    font-size: 74px;
+    line-height: 1.2;
+}
+
+/* ANIMACIÓN TEXTO */
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* FLECHAS */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(1);
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    border: none;
+    font-size: 56px;
+    /* 👈 más grande */
+    width: 55px;
+    /* 👈 más grande */
+    height: 350px;
+    /* 👈 más grande */
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+
+/* SOLO aparece cuando pasas el mouse encima */
+.arrow:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Para que se pueda "activar" el hover */
+.arrow-left,
+.arrow-right {
+    opacity: 0.15;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    opacity: 1;
+}
+
+
+
+.arrow-left {
+    left: 20px;
+}
+
+.arrow-right {
+    right: 20px;
+}
+
+/* DOTS */
+.dots {
+    position: absolute;
+    bottom: 60px;
+    left: 80px;
+    /* 👈 a la izquierda */
+    transform: none;
+    display: flex;
+    gap: 18px;
+}
+
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    position: relative;
+}
+
+.dot.active {
+    opacity: 1;
+}
+
+.dot::after {
+    content: attr(data-icon);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.dot:hover::after {
+    opacity: 1;
+}
+
+/* FLECHA ABAJO */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 10px);
+    }
+}
+
+/* ===============================
+   ABOUT BLOQUE
+================================ */
+
+.about-container {
+    position: relative;
+    width: 1501px;
+    height: 554px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding-left: 80px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+
+/* ===============================
+   TEXTO IZQUIERDA
+================================ */
+
+.about-text {
+    width: 688px;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 21px;
+}
+
+.about-tag {
+    width: 517px;
+    padding: 15px 0;
+    font-size: 48px;
+    font-weight: 600;
+    color: #7a3b16;
+    border-bottom: #7a3b16 3px solid;
+}
+
+.about-text h2 {
+    font-size: 62px;
+    line-height: 1.15;
+    color: #1f5b46;
+    font-weight: 700;
+    margin-top: 27px;
+    margin-bottom: 0;
+}
+
+.about-text p {
+    font-size: 21px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 620px;
+}
+
+/* ===============================
+   ACCIONES
+================================ */
+
+.about-actions {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.btn-primary {
+    position: relative;
+    width: 231px;
+    height: 50px;
+    background: #295E4D;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+
+    display: flex;
+    /* 🔑 */
+    align-items: center;
+    /* centra vertical */
+    justify-content: center;
+    /* centra horizontal */
+
+    border-radius: 4px;
+}
+
+.btn-link {
+    font-size: 21px;
+    font-weight: 700;
+    color: #295E4D;
+    text-decoration: none;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.btn-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1px;
+    background: #1f5b46;
+}
+
+/* ===============================
+   IMAGEN DERECHA
+================================ */
+
+.about-image {
+    width: 736px;
+    height: 554px;
+    position: relative;
+    /* 🔑 referencia para la greca */
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===============================
+   GRECA DERECHA
+================================ */
+
+.about-greca {
+    position: absolute;
+    right: calc((100vw - 1600px) / -2);
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    height: 554px;
+    width: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.about-greca img {
+    width: 58px;
+    height: auto;
+    object-fit: contain;
+
+    margin: 0;
+    /* 🔥 elimina el desplazamiento */
+}
+
+/* ===============================
+   BARRA VERDE IZQUIERDA
+================================ */
+
+.about-bar {
+    position: absolute;
+
+    left: calc((100vw - 1580px) / -2);
+    /* 🔥 queda justo a la izquierda de la greca */
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 58px;
+    height: 957px;
+    /* mismo alto que la greca / imagen */
+
+    background: #295E4D;
+    z-index: 1;
+}
+
+/* ===============================
+   Barras inferiores
+================================ */
+.itemsEyP-container {
+    width: 100%;
+    overflow: hidden;
+    /* evita scroll horizontal */
+}
+
+/* contenedores de barras */
+.BarrasInf,
+.BarraMaderaInicio {
+    width: 100vw;
+    /* 🔥 ancho total de la pantalla */
+    height: auto;
+}
+
+/* imágenes */
+.iconosBarra {
+    width: 100vw;
+    /* ocupa todo el ancho visible */
+    height: auto;
+    display: block;
+    /* elimina espacios raros */
+    object-fit: cover;
+}
+
+/* ===============================
+   CARRUSEL ESPECIES INICIO
+================================ */
+
+.especiesInicio {
+    height: 827px;
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    align-items: stretch;
+
+    z-index: 10;
+}
+.carrusel-item span{
+    font-size: 21px;
+}
+
+/* ===============================
+   PANEL DE PRODUCTOS (ÚNICO SUPERPUESTO)
+================================ */
+
+.panel-productos {
+    width: 432px;
+    height: 900px;
+    background: #ffffff;
+    padding: 60px 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* 🔥 texto alineado a la izquierda */
+    text-align: left;
+    align-items: stretch;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    z-index: 20;
+
+    position: relative;
+    top: -120px;
+    margin-left: 60px;
+}
+
+/* ===============================
+   TÍTULO PANEL
+================================ */
+.panel-productos h3 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 50px; /* 🔥 más aire */
+}
+
+/* ===============================
+   LISTA PRODUCTOS
+================================ */
+.productos-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.productos-lista li {
+    font-size: 21px;
+    margin-bottom: 22px; /* 🔥 más separación */
+    cursor: pointer;
+}
+
+.productos-lista li:hover {
+    color: #295E4D;
+}
+
+/* ===============================
+   BOTÓN CATÁLOGO
+================================ */
+.btn-catalogo {
+    margin: 60px auto 0; /* 🔥 centrado horizontal */
+    width: 220px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #295E4D;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ===============================
+   CARRUSEL
+================================ */
+
+.especies-carrusel {
+    height: 600px;
+    position: relative;
+    padding-right: 60px;
+    padding-top: 80px;
+}
+
+.titulo-especies {
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}

@@ -78,3 +78,31 @@ document.addEventListener("DOMContentLoaded", () => {
   // Idioma funciona incluso sin header
   initLanguage();
 });
+/* ================================
+   ======= ENVIOS FORMULARIO=======
+   ================================ */
+   document.addEventListener('submit', (e) => {
+  if (e.target.id === 'contactForm') {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch('/enviar.php', {
+      method: 'POST',
+      body: data
+    })
+    .then(res => res.text())
+    .then(resp => {
+      if (resp.trim() === 'OK') {
+        alert('Mensaje enviado correctamente');
+        form.reset();
+      } else {
+        alert('Error al enviar el mensaje');
+      }
+    })
+    .catch(() => {
+      alert('Error de conexión');
+    });
+  }
+});

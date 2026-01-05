@@ -5,7 +5,6 @@
 }
 
 /* === ESPECIES === */
-
 .especies-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -52,7 +51,6 @@
 
     transform: scale(1);
     transition: transform 1.6s cubic-bezier(0.19, 1, 0.22, 1);
-    /* 🔥 ultra suave */
 }
 
 /* HOVER ZOOM */

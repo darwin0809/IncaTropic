@@ -10,6 +10,11 @@ body {
   margin: 0;
   background: #FFFFFF;
 }
+body.lock-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
 /* --- Sistema de secciones ocultas/activas --- */
 .section {
   display: none;
@@ -309,7 +314,7 @@ body {
 }
 
 .nosotros-container {
-  width: clamp(1130px, 79vw, 1503px);
+  width: 100vw;
   min-height: clamp(460px, 32vw, 612px);
   margin: clamp(32px, 5vw, 56px) auto;
   display: flex;
@@ -379,16 +384,16 @@ body {
 }
 
 .greca {
-  height: clamp(40px, 3vw, 61px);
+  height: clamp(40px, 3.5vw, 68px);
   width: auto;
 }
 
 .greca.izquierda {
-  margin-right: clamp(20px, 3vw, 40px);
+  margin-right: clamp(20px, 3.5vw, 50px);
 }
 
 .greca.derecha {
-  margin-left: clamp(20px, 3vw, 40px);
+  margin-left: clamp(20px, 3.5vw, 50px);
   transform: scaleX(-1);
 }
 
@@ -510,7 +515,7 @@ body {
   background-image: url('/img/Footer/Bajada.svg');
   background-size: cover;
   background-position: center;
-  min-height: 429px;
+  min-height: clamp(429px, 30vw, 570px);
   width: 100%;
   z-index: 4;
   display: flex;
@@ -534,8 +539,8 @@ body {
 
 /* === LOGO + BOTÓN === */
 .footer-brand {
-  width: 327px;
-  height: 246px;
+  width: clamp(327px, 16vw, 435px);
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -545,14 +550,14 @@ body {
 }
 
 .footer-logo {
-  width: 210px;
+  width: clamp(210px, 14.5vw, 279px);
   height: auto;
 }
 
 
 .footer-btn {
-  width: 166px;
-  height: 48px;
+  width: clamp(166px, 11.5vw, 220px);
+  height: clamp(48px, 3.4vw, 64px);
   background: #F4A418;
   color: white;
   font-family: 'Segoe UI Variable', sans-serif;
@@ -592,7 +597,7 @@ body {
 .footer-attention {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  
 }
 
 
@@ -605,7 +610,7 @@ body {
   width: clamp(20px, 1.4vw, 27px);
   height: clamp(20px, 1.4vw, 27px);
   color: white;
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 .footer-attention li:hover span {
@@ -624,6 +629,7 @@ body {
   font-size: 24px;
   font-family: 'Segoe UI Variable', sans-serif;
   font-style: bold;
+  margin-bottom: 30px;
 }
 
 /* === LISTAS (TABULADO UNIFICADO) === */
@@ -663,13 +669,13 @@ body {
   height: clamp(29px, 2vw, 39px);
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 
 .footer-attention img {
   width: clamp(20px, 1.4vw, 27px);
   height: clamp(20px, 1.4vw, 27px);
   flex-shrink: 0;
+  margin-right: 10px;
 }
 
 .footer-attention span {

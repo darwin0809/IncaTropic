@@ -107,3 +107,15 @@ fetch("/sections/productos.html")
     document.getElementById("productos").innerHTML = html;
     initProductos();
   });
+fetch("/sections/contacto.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("contacto").innerHTML = html;
+    initContactoForm();
+  });
+  fetch("/sections/inicio.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("inicio").innerHTML = html;
+    initInicio();
+  });

@@ -1,0 +1,204 @@
+@import url("https://use.typekit.net/brp6pzc.css");
+
+
+/* ===============================
+   AJUSTE PARA INDEX (SECTIONS)
+================================ */
+
+/* El section de contacto ahora es el contenedor real */
+/* CONTENEDOR GENERAL */
+.contacto-wrapper {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* contacto ya NO necesita centrar */
+.contacto {
+    width: 100%;
+}
+
+/* Wrapper centrado */
+.contacto-wrapper {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* ===============================
+   WRAPPER
+================================ */
+.contacto-wrapper {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* ===============================
+   TÍTULO
+================================ */
+.contacto-titulo {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.contacto-titulo h1 {
+    color: #295E4D;
+    font-size: 62px;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: 'Segoe UI Variable', sans-serif;
+
+}
+
+
+/* ===============================
+   CONTENIDO
+================================ */
+.contacto-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* ===============================
+   FORMULARIO
+================================ */
+.formulario {
+    width: 825px;
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+
+}
+
+/* ===============================
+   CAMPOS
+================================ */
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.campo label {
+    font-size: 21px;
+    color: #295E4D;
+    margin-bottom: 6px;
+    font-family: 'Segoe UI Variable', sans-serif;
+}
+
+.campo input,
+.campo textarea {
+    font-family: inherit;
+    font-size: 21px;
+    padding: 8px 4px;
+    border: none;
+    outline: none;
+}
+
+.campo input {
+    border-bottom: 2px solid #295E4D;
+}
+
+.campo textarea {
+    background-color: #F1F1F1;
+    resize: none;
+    padding: 12px;
+}
+
+/* ===============================
+   ERRORES
+================================ */
+.campo small {
+    display: none;
+    font-size: 16px;
+    color: red;
+    margin-top: 6px;
+}
+
+.campo.error input {
+    border-bottom: 2px solid red;
+}
+
+.campo.error textarea {
+    border: 1px solid red;
+}
+
+.campo.error small {
+    display: block;
+}
+
+/* ===============================
+   BOTÓN
+================================ */
+.formulario button {
+    width: 100%;
+    padding: 14px;
+    background: #295E4D;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.formulario button:hover {
+    background: #1f4a3c;
+}
+
+/* ===============================
+   INFO CONTACTO
+================================ */
+.info {
+    width: 435px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* ✅ empieza arriba */
+    padding: 40px 20px; /* mismo padding visual del formulario */
+    margin-left: 20%;
+}
+
+.bloque {
+    margin-bottom: 32px;
+}
+
+.bloque h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #295E4D;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.bloque h3 img {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+}
+
+
+.bloque p {
+    font-size: 21px;
+    color: #295E4D;
+    margin-bottom: 6px;
+    line-height: 1.9;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+    .contacto-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario {
+        padding: 30px;
+    }
+}
